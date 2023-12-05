@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bugwfwhpqfp1n" path="res://addons/kenney_prototype_textures/dark/texture_09.png" id="2_dpxbx"]
 [ext_resource type="Texture2D" uid="uid://1opha1cxcimy" path="res://addons/kenney_prototype_textures/orange/texture_10.png" id="3_tbg6f"]
 [ext_resource type="PackedScene" uid="uid://bhvf1mpbx21hh" path="res://broken pot stylized top down dungeon.glb" id="4_3tooe"]
-[ext_resource type="PackedScene" path="res://stylized dungeon wall square maze top down.glb" id="5_6fy3k"]
+[ext_resource type="PackedScene" uid="uid://c2s2fp6prvoh6" path="res://stylized dungeon wall square maze top down.glb" id="5_6fy3k"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_if5ix"]
 albedo_texture = ExtResource("2_dpxbx")
