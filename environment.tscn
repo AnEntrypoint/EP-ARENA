@@ -1,10 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://c1j7an8woikyd"]
+[gd_scene load_steps=10 format=3 uid="uid://c1j7an8woikyd"]
 
 [ext_resource type="PackedScene" uid="uid://ckf3250w8jpro" path="res://models/Environment.glb" id="1_p4eel"]
 [ext_resource type="Texture2D" uid="uid://bugwfwhpqfp1n" path="res://addons/kenney_prototype_textures/dark/texture_09.png" id="2_dpxbx"]
 [ext_resource type="Texture2D" uid="uid://1opha1cxcimy" path="res://addons/kenney_prototype_textures/orange/texture_10.png" id="3_tbg6f"]
 [ext_resource type="PackedScene" uid="uid://bhvf1mpbx21hh" path="res://broken pot stylized top down dungeon.glb" id="4_3tooe"]
-[ext_resource type="PackedScene" path="res://stylized dungeon wall square maze top down.glb" id="5_6fy3k"]
+[ext_resource type="PackedScene" uid="uid://c2s2fp6prvoh6" path="res://stylized dungeon wall square maze top down.glb" id="5_6fy3k"]
+[ext_resource type="PackedScene" uid="uid://cntylbgpgd6wt" path="res://sympatric fractal mosaic as a high-resolution marble floor.glb" id="6_wd3qv"]
+[ext_resource type="PackedScene" path="res://sympatric fractal mosaic as a high-resolution marble floor(1).glb" id="7_wiju6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_if5ix"]
 albedo_texture = ExtResource("2_dpxbx")
@@ -19,6 +21,9 @@ uv1_triplanar = true
 [node name="Plane" parent="." index="0"]
 surface_material_override/0 = SubResource("StandardMaterial3D_if5ix")
 surface_material_override/1 = SubResource("StandardMaterial3D_jylvv")
+
+[node name="CollisionShape3D" parent="Plane/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9.53674e-07, 0.00473499)
 
 [node name="broken pot stylized top down dungeon" parent="." index="1" instance=ExtResource("4_3tooe")]
 transform = Transform3D(2.365, 0, 0, 0, 2.365, 0, 0, 0, 2.365, 5.06534, 3.48416, 4.93069)
@@ -156,13 +161,13 @@ transform = Transform3D(-8.39259e-08, 0, 1.92, 0, 1.92, 0, -1.92, 0, -8.39259e-0
 transform = Transform3D(-1.92, 0, -1.67852e-07, 0, 1.92, 0, 1.67852e-07, 0, -1.92, 17.0524, 1.10432, 4.96798)
 
 [node name="stylized dungeon wall square maze top down38" parent="." index="46" instance=ExtResource("5_6fy3k")]
-transform = Transform3D(-8.39259e-08, 0, 1.92, 0, 1.92, 0, -1.92, 0, -8.39259e-08, 15.0058, 1.0475, 4.96798)
+transform = Transform3D(-8.39259e-08, 0, 1.92, 0, 1.92, 0, -1.92, 0, -8.39259e-08, 15.0058, 1.0475, 4.97271)
 
 [node name="stylized dungeon wall square maze top down39" parent="." index="47" instance=ExtResource("5_6fy3k")]
-transform = Transform3D(1.92, 0, -7.10543e-15, 0, 1.92, 0, 7.10543e-15, 0, 1.92, 12.9563, 1.0475, 4.96798)
+transform = Transform3D(1.92, 0, -7.10543e-15, 0, 1.92, 0, 7.10543e-15, 0, 1.92, 12.9563, 1.0475, 4.97271)
 
 [node name="stylized dungeon wall square maze top down40" parent="." index="48" instance=ExtResource("5_6fy3k")]
-transform = Transform3D(-8.39259e-08, 0, 1.92, 0, 1.92, 0, -1.92, 0, -8.39259e-08, 10.9847, 1.0475, 4.96798)
+transform = Transform3D(-8.39259e-08, 0, 1.92, 0, 1.92, 0, -1.92, 0, -8.39259e-08, 10.9847, 1.0475, 4.97271)
 
 [node name="broken pot stylized top down dungeon9" parent="." index="49" instance=ExtResource("4_3tooe")]
 transform = Transform3D(2.365, 0, 0, 0, 2.365, 0, 0, 0, 2.365, -24.8749, 5.4554, 24.9609)
@@ -187,3 +192,1083 @@ transform = Transform3D(2.365, 0, 0, 0, 2.365, 0, 0, 0, 2.365, 25.0859, 5.4554, 
 
 [node name="broken pot stylized top down dungeon16" parent="." index="56" instance=ExtResource("4_3tooe")]
 transform = Transform3D(2.365, 0, 0, 0, 2.365, 0, 0, 0, 2.365, 25.0859, 3.29554, -25.019)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor" parent="." index="57" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5334, 0, 0, 0, 2.5334, 0, 0, 0, 2.5334, 8.28901, 0.0215637, -8.48029)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor2" parent="." index="58" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.10739e-07, 0, 2.5334, 0, 2.5334, 0, -2.5334, 0, -1.10739e-07, 8.28901, 0.0215637, -5.05436)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor3" parent="." index="59" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5334, 0, 0, 0, 2.5334, 0, 0, 0, 2.5334, 8.28901, 0.0215637, -1.70468)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor4" parent="." index="60" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.10739e-07, 0, 2.5334, 0, 2.5334, 0, -2.5334, 0, -1.10739e-07, 8.28901, 0.0215637, 1.63036)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor5" parent="." index="61" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.10739e-07, 0, -2.5334, 0, 2.5334, 0, 2.5334, 0, -1.10739e-07, 8.28901, 0.0215637, 4.96993)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor6" parent="." index="62" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.10739e-07, 0, 2.5334, 0, 2.5334, 0, -2.5334, 0, -1.10739e-07, 8.28901, -0.0370824, 8.38487)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor7" parent="." index="63" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5334, 0, -2.21477e-07, 0, 2.5334, 0, 2.21477e-07, 0, -2.5334, 5.04771, 0.0215637, 8.39557)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor8" parent="." index="64" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.32216e-07, 0, -2.5334, 0, 2.5334, 0, 2.5334, 0, 3.32216e-07, 5.04771, 0.0215637, 4.96964)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor9" parent="." index="65" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5334, 0, -2.21477e-07, 0, 2.5334, 0, 2.21477e-07, 0, -2.5334, 5.04771, 0.0215637, 1.61996)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor11" parent="." index="66" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.10739e-07, 0, 2.5334, 0, 2.5334, 0, -2.5334, 0, -1.10739e-07, 5.0477, 0.0215637, -5.05465)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor12" parent="." index="67" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.32216e-07, 0, -2.5334, 0, 2.5334, 0, 2.5334, 0, 3.32216e-07, 5.0477, -0.0370824, -8.46959)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor13" parent="." index="68" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5334, 0, 0, 0, 2.5334, 0, 0, 0, 2.5334, 1.83985, 0.0215637, -8.48029)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor14" parent="." index="69" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.10739e-07, 0, 2.5334, 0, 2.5334, 0, -2.5334, 0, -1.10739e-07, 1.83985, 0.0215637, -5.05436)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor15" parent="." index="70" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5334, 0, 0, 0, 2.5334, 0, 0, 0, 2.5334, 1.83985, 0.0215637, -1.70468)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor16" parent="." index="71" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.10739e-07, 0, 2.5334, 0, 2.5334, 0, -2.5334, 0, -1.10739e-07, 1.83985, 0.0215637, 1.64582)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor18" parent="." index="72" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.10739e-07, 0, 2.5334, 0, 2.5334, 0, -2.5334, 0, -1.10739e-07, 1.83985, -0.0370824, 8.38487)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor19" parent="." index="73" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5334, 0, -2.21477e-07, 0, 2.5334, 0, 2.21477e-07, 0, -2.5334, -1.40145, 0.0215637, 8.39557)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor20" parent="." index="74" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.32216e-07, 0, -2.5334, 0, 2.5334, 0, 2.5334, 0, 3.32216e-07, -1.40145, 0.0215637, 4.96964)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor21" parent="." index="75" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5334, 0, -2.21477e-07, 0, 2.5334, 0, 2.21477e-07, 0, -2.5334, -1.40145, 0.0215637, 1.61996)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor22" parent="." index="76" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.32216e-07, 0, -2.5334, 0, 2.5334, 0, 2.5334, 0, 3.32216e-07, -1.40145, 0.0215637, -1.71508)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor24" parent="." index="77" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.32216e-07, 0, -2.5334, 0, 2.5334, 0, 2.5334, 0, 3.32216e-07, -1.40145, -0.0370824, -8.46959)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor25" parent="." index="78" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5334, 0, 0, 0, 2.5334, 0, 0, 0, 2.5334, -4.83139, 0.0215637, -8.48029)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor26" parent="." index="79" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.10739e-07, 0, 2.5334, 0, 2.5334, 0, -2.5334, 0, -1.10739e-07, -4.83139, 0.0215637, -5.05436)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor27" parent="." index="80" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5334, 0, 0, 0, 2.5334, 0, 0, 0, 2.5334, -4.83139, 0.0215637, -1.70468)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor29" parent="." index="81" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.10739e-07, 0, -2.5334, 0, 2.5334, 0, 2.5334, 0, -1.10739e-07, -4.83139, 0.0215637, 4.96993)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor30" parent="." index="82" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.10739e-07, 0, 2.5334, 0, 2.5334, 0, -2.5334, 0, -1.10739e-07, -4.83139, -0.0370824, 8.38487)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor31" parent="." index="83" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5334, 0, -2.21477e-07, 0, 2.5334, 0, 2.21477e-07, 0, -2.5334, -8.07269, 0.0215637, 8.39557)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor32" parent="." index="84" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.32216e-07, 0, -2.5334, 0, 2.5334, 0, 2.5334, 0, 3.32216e-07, -8.0727, 0.0215637, 4.96964)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor33" parent="." index="85" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5334, 0, -2.21477e-07, 0, 2.5334, 0, 2.21477e-07, 0, -2.5334, -8.0727, 0.0215637, 1.61996)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor34" parent="." index="86" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.32216e-07, 0, -2.5334, 0, 2.5334, 0, 2.5334, 0, 3.32216e-07, -8.0727, 0.0215637, -1.71508)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor35" parent="." index="87" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.10739e-07, 0, 2.5334, 0, 2.5334, 0, -2.5334, 0, -1.10739e-07, -8.0727, 0.0215637, -5.05465)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor36" parent="." index="88" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.32216e-07, 0, -2.5334, 0, 2.5334, 0, 2.5334, 0, 3.32216e-07, -8.0727, -0.0370824, -8.46959)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor37" parent="." index="89" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 28.1592, 2.02317, 11.6793)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor38" parent="." index="90" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, 28.1592, 2.02317, 15.06)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor39" parent="." index="91" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 28.1592, 2.02317, 18.3655)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor40" parent="." index="92" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, 28.1592, 2.02317, 21.6566)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor41" parent="." index="93" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278e-07, 28.1592, 2.02317, 24.9521)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor42" parent="." index="94" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, 28.1592, 1.9653, 28.3221)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor43" parent="." index="95" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 0, -2.18557e-07, 0, 2.5, 0, 2.18557e-07, 0, -2.5, 24.9606, 2.02317, 28.3326)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor44" parent="." index="96" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.27835e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, 3.27835e-07, 24.9606, 2.02317, 24.9518)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor45" parent="." index="97" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 0, -2.18557e-07, 0, 2.5, 0, 2.18557e-07, 0, -2.5, 24.9606, 2.02317, 21.6463)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor46" parent="." index="98" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.27835e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, 3.27835e-07, 24.9606, 2.02317, 18.3553)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor47" parent="." index="99" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, 24.9606, 2.02317, 15.0597)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor48" parent="." index="100" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.27835e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, 3.27835e-07, 24.9606, 1.9653, 11.6898)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor49" parent="." index="101" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 21.7951, 2.02317, 11.6793)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor50" parent="." index="102" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, 21.7951, 2.02317, 15.06)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor51" parent="." index="103" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 21.7951, 2.02317, 18.3655)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor52" parent="." index="104" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, 21.7951, 2.02317, 21.6566)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor53" parent="." index="105" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278e-07, 21.7951, 2.02317, 24.9521)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor54" parent="." index="106" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, 21.7951, 1.9653, 28.3221)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor55" parent="." index="107" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 28.1592, 2.02317, -8.32913)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor56" parent="." index="108" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, 28.1592, 2.02317, -4.94838)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor57" parent="." index="109" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 28.1592, 2.02317, -1.64287)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor58" parent="." index="110" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, 28.1592, 2.02317, 1.6482)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor59" parent="." index="111" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278e-07, 28.1592, 2.02317, 4.94374)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor60" parent="." index="112" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, 28.1592, 1.9653, 8.31365)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor61" parent="." index="113" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 0, -2.18557e-07, 0, 2.5, 0, 2.18557e-07, 0, -2.5, 24.9606, 2.02317, 8.32421)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor62" parent="." index="114" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.27835e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, 3.27835e-07, 24.9606, 2.02317, 4.94345)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor63" parent="." index="115" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 0, -2.18557e-07, 0, 2.5, 0, 2.18557e-07, 0, -2.5, 24.9606, 2.02317, 1.63794)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor64" parent="." index="116" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.27835e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, 3.27835e-07, 24.9606, 2.02317, -1.65313)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor65" parent="." index="117" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, 24.9606, 2.02317, -4.94867)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor66" parent="." index="118" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.27835e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, 3.27835e-07, 24.9606, 1.9653, -8.31858)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor67" parent="." index="119" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 21.7951, 2.02317, -8.32913)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor68" parent="." index="120" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, 21.7951, 2.02317, -4.94838)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor69" parent="." index="121" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 21.7951, 2.02317, -1.64287)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor70" parent="." index="122" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, 21.7951, 2.02317, 1.6482)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor71" parent="." index="123" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278e-07, 21.7951, 2.02317, 4.94374)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor72" parent="." index="124" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, 21.7951, 1.9653, 8.31365)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor73" parent="." index="125" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -21.7994, 2.02317, 11.6793)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor74" parent="." index="126" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, -21.7994, 2.02317, 15.06)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor75" parent="." index="127" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -21.7994, 2.02317, 18.3655)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor76" parent="." index="128" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, -21.7994, 2.02317, 21.6566)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor77" parent="." index="129" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278e-07, -21.7994, 2.02317, 24.9521)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor78" parent="." index="130" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, -21.7994, 1.9653, 28.3221)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor79" parent="." index="131" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 0, -2.18557e-07, 0, 2.5, 0, 2.18557e-07, 0, -2.5, -24.998, 2.02317, 28.3326)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor80" parent="." index="132" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.27835e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, 3.27835e-07, -24.998, 2.02317, 24.9518)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor81" parent="." index="133" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 0, -2.18557e-07, 0, 2.5, 0, 2.18557e-07, 0, -2.5, -24.998, 2.02317, 21.6463)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor82" parent="." index="134" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.27835e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, 3.27835e-07, -24.998, 2.02317, 18.3553)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor83" parent="." index="135" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, -24.998, 2.02317, 15.0597)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor84" parent="." index="136" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.27835e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, 3.27835e-07, -24.998, 1.9653, 11.6898)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor85" parent="." index="137" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -28.1635, 2.02317, 11.6793)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor86" parent="." index="138" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, -28.1635, 2.02317, 15.06)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor87" parent="." index="139" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -28.1635, 2.02317, 18.3655)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor88" parent="." index="140" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, -28.1635, 2.02317, 21.6566)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor89" parent="." index="141" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278e-07, -28.1635, 2.02317, 24.9521)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor90" parent="." index="142" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, -28.1635, 1.9653, 28.3221)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor91" parent="." index="143" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -21.7994, 2.02317, -8.32913)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor92" parent="." index="144" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, -21.7994, 2.02317, -4.94838)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor93" parent="." index="145" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -21.7994, 2.02317, -1.64287)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor94" parent="." index="146" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, -21.7994, 2.02317, 1.6482)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor95" parent="." index="147" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278e-07, -21.7994, 2.02317, 4.94374)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor96" parent="." index="148" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, -21.7994, 1.9653, 8.31365)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor97" parent="." index="149" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 0, -2.18557e-07, 0, 2.5, 0, 2.18557e-07, 0, -2.5, -24.998, 2.02317, 8.32421)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor98" parent="." index="150" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.27835e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, 3.27835e-07, -24.998, 2.02317, 4.94345)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor99" parent="." index="151" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 0, -2.18557e-07, 0, 2.5, 0, 2.18557e-07, 0, -2.5, -24.998, 2.02317, 1.63794)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor100" parent="." index="152" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.27835e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, 3.27835e-07, -24.998, 2.02317, -1.65313)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor101" parent="." index="153" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, -24.998, 2.02317, -4.94867)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor102" parent="." index="154" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.27835e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, 3.27835e-07, -24.998, 1.9653, -8.31858)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor103" parent="." index="155" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -28.1635, 2.02317, -8.32913)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor104" parent="." index="156" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, -28.1635, 2.02317, -4.94838)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor105" parent="." index="157" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -28.1635, 2.02317, -1.64287)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor106" parent="." index="158" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, -28.1635, 2.02317, 1.6482)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor107" parent="." index="159" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278e-07, -28.1635, 2.02317, 4.94374)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor108" parent="." index="160" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, -28.1635, 1.9653, 8.31365)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor109" parent="." index="161" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -21.7994, 2.02317, -28.3291)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor110" parent="." index="162" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, -21.7994, 2.02317, -24.9484)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor111" parent="." index="163" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -21.7994, 2.02317, -21.6429)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor112" parent="." index="164" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, -21.7994, 2.02317, -18.3518)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor113" parent="." index="165" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278e-07, -21.7994, 2.02317, -15.0563)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor114" parent="." index="166" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, -21.7994, 1.9653, -11.6863)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor115" parent="." index="167" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 0, -2.18557e-07, 0, 2.5, 0, 2.18557e-07, 0, -2.5, -24.998, 2.02317, -11.6758)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor116" parent="." index="168" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.27835e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, 3.27835e-07, -24.998, 2.02317, -15.0566)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor117" parent="." index="169" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 0, -2.18557e-07, 0, 2.5, 0, 2.18557e-07, 0, -2.5, -24.998, 2.02317, -18.3621)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor118" parent="." index="170" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.27835e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, 3.27835e-07, -24.998, 2.02317, -21.6531)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor119" parent="." index="171" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, -24.998, 2.02317, -24.9487)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor120" parent="." index="172" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.27835e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, 3.27835e-07, -24.998, 1.9653, -28.3186)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor121" parent="." index="173" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -28.1635, 2.02317, -28.3291)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor122" parent="." index="174" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, -28.1635, 2.02317, -24.9484)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor123" parent="." index="175" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -28.1635, 2.02317, -21.6429)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor124" parent="." index="176" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, -28.1635, 2.02317, -18.3518)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor125" parent="." index="177" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278e-07, -28.1635, 2.02317, -15.0563)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor126" parent="." index="178" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, -28.1635, 1.9653, -11.6863)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor127" parent="." index="179" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 28.2006, 2.02317, -28.3291)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor128" parent="." index="180" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, 28.2006, 2.02317, -24.9484)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor129" parent="." index="181" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 28.2006, 2.02317, -21.6429)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor130" parent="." index="182" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, 28.2006, 2.02317, -18.3518)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor131" parent="." index="183" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278e-07, 28.2006, 2.02317, -15.0563)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor132" parent="." index="184" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, 28.2006, 1.9653, -11.6863)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor133" parent="." index="185" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 0, -2.18557e-07, 0, 2.5, 0, 2.18557e-07, 0, -2.5, 25.002, 2.02317, -11.6758)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor134" parent="." index="186" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.27835e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, 3.27835e-07, 25.002, 2.02317, -15.0566)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor135" parent="." index="187" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 0, -2.18557e-07, 0, 2.5, 0, 2.18557e-07, 0, -2.5, 25.002, 2.02317, -18.3621)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor136" parent="." index="188" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.27835e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, 3.27835e-07, 25.002, 2.02317, -21.6531)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor137" parent="." index="189" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, 25.002, 2.02317, -24.9487)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor138" parent="." index="190" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.27835e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, 3.27835e-07, 25.002, 1.9653, -28.3186)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor139" parent="." index="191" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 21.8365, 2.02317, -28.3291)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor140" parent="." index="192" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, 21.8365, 2.02317, -24.9484)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor141" parent="." index="193" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 21.8365, 2.02317, -21.6429)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor142" parent="." index="194" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, 21.8365, 2.02317, -18.3518)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor143" parent="." index="195" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278e-07, 21.8365, 2.02317, -15.0563)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor144" parent="." index="196" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, 21.8365, 1.9653, -11.6863)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor217" parent="." index="197" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.55117, -0.505746, 0, 0.505746, 2.55117, 0, 0, 0, 2.60081, 18.4069, 1.69827, -8.54688)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor218" parent="." index="198" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.34545e-07, -0.505746, -2.55117, 6.63206e-08, 2.55117, -0.505746, 2.60081, 0, 3.41055e-07, 15.1545, 0.992152, -8.5359)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor219" parent="." index="199" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.55117, -0.505746, 0, 0.505746, 2.55117, 0, 0, 0, 2.60081, 11.9125, 0.410822, -8.54688)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor220" parent="." index="200" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.11515e-07, -0.505746, 2.55117, -2.21069e-08, 2.55117, 0.505746, -2.60081, 0, -1.13685e-07, 18.4491, 1.70665, -18.9737)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor221" parent="." index="201" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.11515e-07, -0.505746, -2.55117, -2.21069e-08, 2.55117, -0.505746, 2.60081, 0, -1.13685e-07, 18.4491, 1.70665, -15.5453)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor222" parent="." index="202" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.11515e-07, -0.505746, 2.55117, -2.21069e-08, 2.55117, 0.505746, -2.60081, 0, -1.13685e-07, 18.4608, 1.64759, -12.0395)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor223" parent="." index="203" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.55117, -0.505746, -2.2303e-07, -0.505746, 2.55117, -4.42137e-08, 2.2737e-07, 0, -2.60081, 15.1851, 1.05958, -12.0285)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor224" parent="." index="204" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.34545e-07, -0.505746, -2.55117, 6.63206e-08, 2.55117, -0.505746, 2.60081, 0, 3.41055e-07, 15.1851, 1.05958, -15.5456)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor225" parent="." index="205" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.55117, -0.505746, -2.2303e-07, -0.505746, 2.55117, -4.42137e-08, 2.2737e-07, 0, -2.60081, 15.1851, 1.05958, -18.9844)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor226" parent="." index="206" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.11515e-07, -0.505746, 2.55117, -2.21069e-08, 2.55117, 0.505746, -2.60081, 0, -1.13685e-07, 11.9547, 0.419197, -18.9737)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor227" parent="." index="207" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.11515e-07, -0.505746, -2.55117, -2.21069e-08, 2.55117, -0.505746, 2.60081, 0, -1.13685e-07, 11.9547, 0.419197, -15.5453)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor228" parent="." index="208" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.11515e-07, -0.505746, 2.55117, -2.21069e-08, 2.55117, 0.505746, -2.60081, 0, -1.13685e-07, 11.9665, 0.36014, -12.0395)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor229" parent="." index="209" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.55117, -0.505746, 0, 0.505746, 2.55117, 0, 0, 0, 2.60081, 18.4069, 1.69827, 5.28558)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor230" parent="." index="210" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.34545e-07, -0.505746, -2.55117, 6.63206e-08, 2.55117, -0.505746, 2.60081, 0, 3.41055e-07, 15.1545, 0.992152, 5.29656)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor231" parent="." index="211" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.55117, -0.505746, 0, 0.505746, 2.55117, 0, 0, 0, 2.60081, 11.9125, 0.410822, 5.28558)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor232" parent="." index="212" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.11515e-07, -0.505746, 2.55117, -2.21069e-08, 2.55117, 0.505746, -2.60081, 0, -1.13685e-07, 18.4491, 1.70665, -5.14125)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor233" parent="." index="213" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.11515e-07, -0.505746, -2.55117, -2.21069e-08, 2.55117, -0.505746, 2.60081, 0, -1.13685e-07, 18.4491, 1.70665, -1.71281)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor234" parent="." index="214" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.11515e-07, -0.505746, 2.55117, -2.21069e-08, 2.55117, 0.505746, -2.60081, 0, -1.13685e-07, 18.4608, 1.64759, 1.79299)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor235" parent="." index="215" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.55117, -0.505746, -2.2303e-07, -0.505746, 2.55117, -4.42137e-08, 2.2737e-07, 0, -2.60081, 15.1851, 1.05958, 1.80397)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor236" parent="." index="216" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.34545e-07, -0.505746, -2.55117, 6.63206e-08, 2.55117, -0.505746, 2.60081, 0, 3.41055e-07, 15.1851, 1.05958, -1.71312)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor237" parent="." index="217" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.55117, -0.505746, -2.2303e-07, -0.505746, 2.55117, -4.42137e-08, 2.2737e-07, 0, -2.60081, 15.1851, 1.05958, -5.15192)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor238" parent="." index="218" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.11515e-07, -0.505746, 2.55117, -2.21069e-08, 2.55117, 0.505746, -2.60081, 0, -1.13685e-07, 11.9547, 0.419197, -5.14125)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor239" parent="." index="219" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.11515e-07, -0.505746, -2.55117, -2.21069e-08, 2.55117, -0.505746, 2.60081, 0, -1.13685e-07, 11.9547, 0.419197, -1.71281)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor240" parent="." index="220" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.11515e-07, -0.505746, 2.55117, -2.21069e-08, 2.55117, 0.505746, -2.60081, 0, -1.13685e-07, 11.9665, 0.36014, 1.79299)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor241" parent="." index="221" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.55117, -0.505746, 0, 0.505746, 2.55117, 0, 0, 0, 2.60081, 18.4069, 1.69827, 19.2377)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor242" parent="." index="222" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.34545e-07, -0.505746, -2.55117, 6.63206e-08, 2.55117, -0.505746, 2.60081, 0, 3.41055e-07, 15.1545, 0.992152, 19.2487)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor243" parent="." index="223" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.55117, -0.505746, 0, 0.505746, 2.55117, 0, 0, 0, 2.60081, 11.9125, 0.410822, 19.2377)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor244" parent="." index="224" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.11515e-07, -0.505746, 2.55117, -2.21069e-08, 2.55117, 0.505746, -2.60081, 0, -1.13685e-07, 18.4491, 1.70665, 8.81085)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor245" parent="." index="225" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.11515e-07, -0.505746, -2.55117, -2.21069e-08, 2.55117, -0.505746, 2.60081, 0, -1.13685e-07, 18.4491, 1.70665, 12.2393)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor246" parent="." index="226" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.11515e-07, -0.505746, 2.55117, -2.21069e-08, 2.55117, 0.505746, -2.60081, 0, -1.13685e-07, 18.4608, 1.64759, 15.7451)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor247" parent="." index="227" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.55117, -0.505746, -2.2303e-07, -0.505746, 2.55117, -4.42137e-08, 2.2737e-07, 0, -2.60081, 15.1851, 1.05958, 15.7561)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor248" parent="." index="228" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.34545e-07, -0.505746, -2.55117, 6.63206e-08, 2.55117, -0.505746, 2.60081, 0, 3.41055e-07, 15.1851, 1.05958, 12.239)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor249" parent="." index="229" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.55117, -0.505746, -2.2303e-07, -0.505746, 2.55117, -4.42137e-08, 2.2737e-07, 0, -2.60081, 15.1851, 1.05958, 8.80017)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor250" parent="." index="230" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.11515e-07, -0.505746, 2.55117, -2.21069e-08, 2.55117, 0.505746, -2.60081, 0, -1.13685e-07, 11.9547, 0.419197, 8.81085)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor251" parent="." index="231" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.11515e-07, -0.505746, -2.55117, -2.21069e-08, 2.55117, -0.505746, 2.60081, 0, -1.13685e-07, 11.9547, 0.419197, 12.2393)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor252" parent="." index="232" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.11515e-07, -0.505746, 2.55117, -2.21069e-08, 2.55117, 0.505746, -2.60081, 0, -1.13685e-07, 11.9665, 0.36014, 15.7451)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor253" parent="." index="233" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.55117, 0.505746, -2.2737e-07, 0.505746, 2.55117, 0, 2.2303e-07, -4.42137e-08, -2.60081, -18.3862, 1.69827, 8.66938)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor254" parent="." index="234" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-5.61915e-07, 0.505746, 2.55117, 6.63206e-08, 2.55117, -0.505746, -2.60081, -4.42137e-08, -5.64085e-07, -15.1339, 0.992152, 8.65841)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor255" parent="." index="235" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.55117, 0.505746, -2.2737e-07, 0.505746, 2.55117, 0, 2.2303e-07, -4.42137e-08, -2.60081, -11.8918, 0.410822, 8.66938)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor256" parent="." index="236" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.38885e-07, 0.505746, -2.55117, -2.21069e-08, 2.55117, 0.505746, 2.60081, -4.42137e-08, 3.36715e-07, -18.4284, 1.70665, 19.0962)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor257" parent="." index="237" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.15855e-07, 0.505746, 2.55117, -2.21069e-08, 2.55117, -0.505746, -2.60081, -4.42137e-08, -1.09345e-07, -18.4284, 1.70665, 15.6678)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor258" parent="." index="238" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.38885e-07, 0.505746, -2.55117, -2.21069e-08, 2.55117, 0.505746, 2.60081, -4.42137e-08, 3.36715e-07, -18.4401, 1.64759, 12.162)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor259" parent="." index="239" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.55117, 0.505746, 4.504e-07, -0.505746, 2.55117, -4.42137e-08, -4.504e-07, -4.42137e-08, 2.60081, -15.1644, 1.05958, 12.151)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor260" parent="." index="240" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-5.61915e-07, 0.505746, 2.55117, 6.63206e-08, 2.55117, -0.505746, -2.60081, -4.42137e-08, -5.64085e-07, -15.1644, 1.05958, 15.6681)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor261" parent="." index="241" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.55117, 0.505746, 4.504e-07, -0.505746, 2.55117, -4.42137e-08, -4.504e-07, -4.42137e-08, 2.60081, -15.1644, 1.05958, 19.1069)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor262" parent="." index="242" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.38885e-07, 0.505746, -2.55117, -2.21069e-08, 2.55117, 0.505746, 2.60081, -4.42137e-08, 3.36715e-07, -11.9341, 0.419197, 19.0962)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor263" parent="." index="243" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.15855e-07, 0.505746, 2.55117, -2.21069e-08, 2.55117, -0.505746, -2.60081, -4.42137e-08, -1.09345e-07, -11.9341, 0.419197, 15.6678)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor264" parent="." index="244" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.38885e-07, 0.505746, -2.55117, -2.21069e-08, 2.55117, 0.505746, 2.60081, -4.42137e-08, 3.36715e-07, -11.9458, 0.36014, 12.162)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor265" parent="." index="245" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.55117, 0.505746, -2.2737e-07, 0.505746, 2.55117, 0, 2.2303e-07, -4.42137e-08, -2.60081, -18.3862, 1.69827, -5.16308)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor266" parent="." index="246" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-5.61915e-07, 0.505746, 2.55117, 6.63206e-08, 2.55117, -0.505746, -2.60081, -4.42137e-08, -5.64085e-07, -15.1339, 0.992152, -5.17406)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor267" parent="." index="247" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.55117, 0.505746, -2.2737e-07, 0.505746, 2.55117, 0, 2.2303e-07, -4.42137e-08, -2.60081, -11.8918, 0.410822, -5.16308)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor268" parent="." index="248" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.38885e-07, 0.505746, -2.55117, -2.21069e-08, 2.55117, 0.505746, 2.60081, -4.42137e-08, 3.36715e-07, -18.4284, 1.70665, 5.26375)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor269" parent="." index="249" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.15855e-07, 0.505746, 2.55117, -2.21069e-08, 2.55117, -0.505746, -2.60081, -4.42137e-08, -1.09345e-07, -18.4284, 1.70665, 1.83532)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor270" parent="." index="250" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.38885e-07, 0.505746, -2.55117, -2.21069e-08, 2.55117, 0.505746, 2.60081, -4.42137e-08, 3.36715e-07, -18.4401, 1.64759, -1.67049)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor271" parent="." index="251" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.55117, 0.505746, 4.504e-07, -0.505746, 2.55117, -4.42137e-08, -4.504e-07, -4.42137e-08, 2.60081, -15.1644, 1.05958, -1.68147)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor272" parent="." index="252" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-5.61915e-07, 0.505746, 2.55117, 6.63206e-08, 2.55117, -0.505746, -2.60081, -4.42137e-08, -5.64085e-07, -15.1644, 1.05958, 1.83562)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor273" parent="." index="253" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.55117, 0.505746, 4.504e-07, -0.505746, 2.55117, -4.42137e-08, -4.504e-07, -4.42137e-08, 2.60081, -15.1644, 1.05958, 5.27442)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor274" parent="." index="254" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.38885e-07, 0.505746, -2.55117, -2.21069e-08, 2.55117, 0.505746, 2.60081, -4.42137e-08, 3.36715e-07, -11.9341, 0.419197, 5.26375)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor275" parent="." index="255" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.15855e-07, 0.505746, 2.55117, -2.21069e-08, 2.55117, -0.505746, -2.60081, -4.42137e-08, -1.09345e-07, -11.9341, 0.419197, 1.83532)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor276" parent="." index="256" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.38885e-07, 0.505746, -2.55117, -2.21069e-08, 2.55117, 0.505746, 2.60081, -4.42137e-08, 3.36715e-07, -11.9458, 0.36014, -1.67049)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor277" parent="." index="257" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.55117, 0.505746, -2.2737e-07, 0.505746, 2.55117, 0, 2.2303e-07, -4.42137e-08, -2.60081, -18.3862, 1.69827, -19.1152)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor278" parent="." index="258" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-5.61915e-07, 0.505746, 2.55117, 6.63206e-08, 2.55117, -0.505746, -2.60081, -4.42137e-08, -5.64085e-07, -15.1339, 0.992152, -19.1262)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor279" parent="." index="259" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.55117, 0.505746, -2.2737e-07, 0.505746, 2.55117, 0, 2.2303e-07, -4.42137e-08, -2.60081, -11.8918, 0.410822, -19.1152)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor280" parent="." index="260" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.38885e-07, 0.505746, -2.55117, -2.21069e-08, 2.55117, 0.505746, 2.60081, -4.42137e-08, 3.36715e-07, -18.4284, 1.70665, -8.68834)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor281" parent="." index="261" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.15855e-07, 0.505746, 2.55117, -2.21069e-08, 2.55117, -0.505746, -2.60081, -4.42137e-08, -1.09345e-07, -18.4284, 1.70665, -12.1168)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor282" parent="." index="262" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.38885e-07, 0.505746, -2.55117, -2.21069e-08, 2.55117, 0.505746, 2.60081, -4.42137e-08, 3.36715e-07, -18.4401, 1.64759, -15.6226)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor283" parent="." index="263" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.55117, 0.505746, 4.504e-07, -0.505746, 2.55117, -4.42137e-08, -4.504e-07, -4.42137e-08, 2.60081, -15.1644, 1.05958, -15.6336)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor284" parent="." index="264" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-5.61915e-07, 0.505746, 2.55117, 6.63206e-08, 2.55117, -0.505746, -2.60081, -4.42137e-08, -5.64085e-07, -15.1644, 1.05958, -12.1165)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor285" parent="." index="265" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.55117, 0.505746, 4.504e-07, -0.505746, 2.55117, -4.42137e-08, -4.504e-07, -4.42137e-08, 2.60081, -15.1644, 1.05958, -8.67767)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor286" parent="." index="266" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.38885e-07, 0.505746, -2.55117, -2.21069e-08, 2.55117, 0.505746, 2.60081, -4.42137e-08, 3.36715e-07, -11.9341, 0.419197, -8.68834)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor287" parent="." index="267" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.15855e-07, 0.505746, 2.55117, -2.21069e-08, 2.55117, -0.505746, -2.60081, -4.42137e-08, -1.09345e-07, -11.9341, 0.419197, -12.1168)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor288" parent="." index="268" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.38885e-07, 0.505746, -2.55117, -2.21069e-08, 2.55117, 0.505746, 2.60081, -4.42137e-08, 3.36715e-07, -11.9458, 0.36014, -15.6226)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor145" parent="." index="269" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, 1.86163, 2.02317, -28.19)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor146" parent="." index="270" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 0, -2.18557e-07, 0, 2.5, 0, 2.18557e-07, 0, -2.5, 5.24239, 2.02317, -28.19)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor147" parent="." index="271" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, 8.54789, 2.02317, -28.19)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor148" parent="." index="272" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 0, -2.18557e-07, 0, 2.5, 0, 2.18557e-07, 0, -2.5, 11.839, 2.02317, -28.19)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor149" parent="." index="273" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 0, -1.42109e-14, 0, 2.5, 0, 1.42109e-14, 0, 2.5, 15.1345, 2.02317, -28.19)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor150" parent="." index="274" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 0, -2.18557e-07, 0, 2.5, 0, 2.18557e-07, 0, -2.5, 18.5044, 1.9653, -28.19)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor151" parent="." index="275" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.27835e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, 3.27835e-07, 18.515, 2.02317, -24.9915)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor152" parent="." index="276" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 0, 4.37114e-07, 0, 2.5, 0, -4.37114e-07, 0, 2.5, 15.1342, 2.02317, -24.9915)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor153" parent="." index="277" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.27835e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, 3.27835e-07, 11.8287, 2.02317, -24.9915)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor154" parent="." index="278" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 0, 4.37114e-07, 0, 2.5, 0, -4.37114e-07, 0, 2.5, 8.53763, 2.02317, -24.9915)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor155" parent="." index="279" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 0, -2.18557e-07, 0, 2.5, 0, 2.18557e-07, 0, -2.5, 5.24209, 2.02317, -24.9915)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor156" parent="." index="280" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 0, 4.37114e-07, 0, 2.5, 0, -4.37114e-07, 0, 2.5, 1.87218, 1.9653, -24.9915)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor157" parent="." index="281" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, 1.86163, 2.02317, -21.8259)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor158" parent="." index="282" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 0, -2.18557e-07, 0, 2.5, 0, 2.18557e-07, 0, -2.5, 5.24239, 2.02317, -21.8259)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor159" parent="." index="283" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, 8.54789, 2.02317, -21.8259)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor160" parent="." index="284" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 0, -2.18557e-07, 0, 2.5, 0, 2.18557e-07, 0, -2.5, 11.839, 2.02317, -21.8259)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor161" parent="." index="285" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 0, -1.42109e-14, 0, 2.5, 0, 1.42109e-14, 0, 2.5, 15.1345, 2.02317, -21.8259)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor162" parent="." index="286" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 0, -2.18557e-07, 0, 2.5, 0, 2.18557e-07, 0, -2.5, 18.5044, 1.9653, -21.8259)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor163" parent="." index="287" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, -18.3074, 2.02317, -28.19)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor164" parent="." index="288" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 0, -2.18557e-07, 0, 2.5, 0, 2.18557e-07, 0, -2.5, -14.9267, 2.02317, -28.19)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor165" parent="." index="289" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, -11.6212, 2.02317, -28.19)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor166" parent="." index="290" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 0, -2.18557e-07, 0, 2.5, 0, 2.18557e-07, 0, -2.5, -8.33011, 2.02317, -28.19)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor167" parent="." index="291" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 0, -1.42109e-14, 0, 2.5, 0, 1.42109e-14, 0, 2.5, -5.03457, 2.02317, -28.19)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor168" parent="." index="292" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 0, -2.18557e-07, 0, 2.5, 0, 2.18557e-07, 0, -2.5, -1.66465, 1.9653, -28.19)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor169" parent="." index="293" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.27835e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, 3.27835e-07, -1.6541, 2.02317, -24.9915)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor170" parent="." index="294" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 0, 4.37114e-07, 0, 2.5, 0, -4.37114e-07, 0, 2.5, -5.03486, 2.02317, -24.9915)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor171" parent="." index="295" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.27835e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, 3.27835e-07, -8.34037, 2.02317, -24.9915)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor172" parent="." index="296" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 0, 4.37114e-07, 0, 2.5, 0, -4.37114e-07, 0, 2.5, -11.6314, 2.02317, -24.9915)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor173" parent="." index="297" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 0, -2.18557e-07, 0, 2.5, 0, 2.18557e-07, 0, -2.5, -14.927, 2.02317, -24.9915)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor174" parent="." index="298" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 0, 4.37114e-07, 0, 2.5, 0, -4.37114e-07, 0, 2.5, -18.2969, 1.9653, -24.9915)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor175" parent="." index="299" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, -18.3074, 2.02317, -21.8259)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor176" parent="." index="300" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 0, -2.18557e-07, 0, 2.5, 0, 2.18557e-07, 0, -2.5, -14.9267, 2.02317, -21.8259)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor177" parent="." index="301" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, -11.6212, 2.02317, -21.8259)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor178" parent="." index="302" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 0, -2.18557e-07, 0, 2.5, 0, 2.18557e-07, 0, -2.5, -8.33011, 2.02317, -21.8259)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor179" parent="." index="303" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 0, -1.42109e-14, 0, 2.5, 0, 1.42109e-14, 0, 2.5, -5.03457, 2.02317, -21.8259)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor180" parent="." index="304" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 0, -2.18557e-07, 0, 2.5, 0, 2.18557e-07, 0, -2.5, -1.66465, 1.9653, -21.8259)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor325" parent="." index="305" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 1.89557e-15, 2.5, 0.496154, 2.45027, 2.16876e-08, -2.45027, 0.496154, -1.07105e-07, 1.86163, 1.68025, -18.2972)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor326" parent="." index="306" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 3.79115e-15, -2.18557e-07, -4.33751e-08, 2.45027, 0.496154, 2.1421e-07, 0.496154, -2.45027, 5.24239, 1.68025, -18.2972)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor327" parent="." index="307" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 1.89557e-15, 2.5, 0.496154, 2.45027, 2.16876e-08, -2.45027, 0.496154, -1.07105e-07, 8.54789, 1.68025, -18.2972)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor328" parent="." index="308" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 3.79115e-15, -2.18557e-07, -4.33751e-08, 2.45027, 0.496154, 2.1421e-07, 0.496154, -2.45027, 11.839, 1.68025, -18.2972)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor329" parent="." index="309" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 2.22653e-22, -1.42109e-14, -2.82031e-15, 2.45027, -0.496154, 1.39282e-14, 0.496154, 2.45027, 15.1345, 1.68025, -18.2972)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor330" parent="." index="310" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 3.79115e-15, -2.18557e-07, -4.33751e-08, 2.45027, 0.496154, 2.1421e-07, 0.496154, -2.45027, 18.5044, 1.62353, -18.3087)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor331" parent="." index="311" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.27835e-07, 4.33857e-15, -2.5, -0.496154, 2.45027, -6.50627e-08, 2.45027, 0.496154, 3.21314e-07, 18.515, 1.04546, -15.1623)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor332" parent="." index="312" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 1.79572e-14, 4.37114e-07, 8.67502e-08, 2.45027, -0.496154, -4.28419e-07, 0.496154, 2.45027, 15.1342, 1.04546, -15.1623)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor333" parent="." index="313" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.27835e-07, 4.33857e-15, -2.5, -0.496154, 2.45027, -6.50627e-08, 2.45027, 0.496154, 3.21314e-07, 11.8287, 1.04546, -15.1623)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor334" parent="." index="314" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 1.79572e-14, 4.37114e-07, 8.67502e-08, 2.45027, -0.496154, -4.28419e-07, 0.496154, 2.45027, 8.53763, 1.04546, -15.1623)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor335" parent="." index="315" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 3.79115e-15, -2.18557e-07, -4.33751e-08, 2.45027, 0.496154, 2.1421e-07, 0.496154, -2.45027, 5.24209, 1.04546, -15.1623)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor336" parent="." index="316" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 1.79572e-14, 4.37114e-07, 8.67502e-08, 2.45027, -0.496154, -4.28419e-07, 0.496154, 2.45027, 1.87218, 0.988734, -15.1737)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor337" parent="." index="317" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 1.89557e-15, 2.5, 0.496154, 2.45027, 2.16876e-08, -2.45027, 0.496154, -1.07105e-07, 1.86163, 0.417215, -12.0597)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor338" parent="." index="318" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 3.79115e-15, -2.18557e-07, -4.33751e-08, 2.45027, 0.496154, 2.1421e-07, 0.496154, -2.45027, 5.24239, 0.417215, -12.0597)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor339" parent="." index="319" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 1.89557e-15, 2.5, 0.496154, 2.45027, 2.16876e-08, -2.45027, 0.496154, -1.07105e-07, 8.54789, 0.417216, -12.0597)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor340" parent="." index="320" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 3.79115e-15, -2.18557e-07, -4.33751e-08, 2.45027, 0.496154, 2.1421e-07, 0.496154, -2.45027, 11.839, 0.417216, -12.0597)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor341" parent="." index="321" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 2.22653e-22, -1.42109e-14, -2.82031e-15, 2.45027, -0.496154, 1.39282e-14, 0.496154, 2.45027, 15.1345, 0.417216, -12.0597)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor342" parent="." index="322" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 3.79115e-15, -2.18557e-07, -4.33751e-08, 2.45027, 0.496154, 2.1421e-07, 0.496154, -2.45027, 18.5044, 0.360494, -12.0712)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor343" parent="." index="323" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 1.89557e-15, 2.5, 0.496154, 2.45027, 2.16876e-08, -2.45027, 0.496154, -1.07105e-07, -18.3074, 1.68025, -18.2972)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor344" parent="." index="324" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 3.79115e-15, -2.18557e-07, -4.33751e-08, 2.45027, 0.496154, 2.1421e-07, 0.496154, -2.45027, -14.9267, 1.68025, -18.2972)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor345" parent="." index="325" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 1.89557e-15, 2.5, 0.496154, 2.45027, 2.16876e-08, -2.45027, 0.496154, -1.07105e-07, -11.6212, 1.68025, -18.2972)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor346" parent="." index="326" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 3.79115e-15, -2.18557e-07, -4.33751e-08, 2.45027, 0.496154, 2.1421e-07, 0.496154, -2.45027, -8.33011, 1.68025, -18.2972)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor347" parent="." index="327" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 2.22653e-22, -1.42109e-14, -2.82031e-15, 2.45027, -0.496154, 1.39282e-14, 0.496154, 2.45027, -5.03457, 1.68025, -18.2972)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor348" parent="." index="328" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 3.79115e-15, -2.18557e-07, -4.33751e-08, 2.45027, 0.496154, 2.1421e-07, 0.496154, -2.45027, -1.66465, 1.62353, -18.3087)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor349" parent="." index="329" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.27835e-07, 4.33857e-15, -2.5, -0.496154, 2.45027, -6.50627e-08, 2.45027, 0.496154, 3.21314e-07, -1.6541, 1.04546, -15.1623)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor350" parent="." index="330" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 1.79572e-14, 4.37114e-07, 8.67502e-08, 2.45027, -0.496154, -4.28419e-07, 0.496154, 2.45027, -5.03486, 1.04546, -15.1623)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor351" parent="." index="331" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.27835e-07, 4.33857e-15, -2.5, -0.496154, 2.45027, -6.50627e-08, 2.45027, 0.496154, 3.21314e-07, -8.34037, 1.04546, -15.1623)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor352" parent="." index="332" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 1.79572e-14, 4.37114e-07, 8.67502e-08, 2.45027, -0.496154, -4.28419e-07, 0.496154, 2.45027, -11.6314, 1.04546, -15.1623)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor353" parent="." index="333" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 3.79115e-15, -2.18557e-07, -4.33751e-08, 2.45027, 0.496154, 2.1421e-07, 0.496154, -2.45027, -14.927, 1.04546, -15.1623)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor354" parent="." index="334" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 1.79572e-14, 4.37114e-07, 8.67502e-08, 2.45027, -0.496154, -4.28419e-07, 0.496154, 2.45027, -18.2969, 0.988734, -15.1737)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor355" parent="." index="335" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 1.89557e-15, 2.5, 0.496154, 2.45027, 2.16876e-08, -2.45027, 0.496154, -1.07105e-07, -18.3074, 0.417215, -12.0597)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor356" parent="." index="336" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 3.79115e-15, -2.18557e-07, -4.33751e-08, 2.45027, 0.496154, 2.1421e-07, 0.496154, -2.45027, -14.9267, 0.417215, -12.0597)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor357" parent="." index="337" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 1.89557e-15, 2.5, 0.496154, 2.45027, 2.16876e-08, -2.45027, 0.496154, -1.07105e-07, -11.6212, 0.417216, -12.0597)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor358" parent="." index="338" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 3.79115e-15, -2.18557e-07, -4.33751e-08, 2.45027, 0.496154, 2.1421e-07, 0.496154, -2.45027, -8.33011, 0.417216, -12.0597)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor359" parent="." index="339" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 2.22653e-22, -1.42109e-14, -2.82031e-15, 2.45027, -0.496154, 1.39282e-14, 0.496154, 2.45027, -5.03457, 0.417216, -12.0597)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor360" parent="." index="340" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 3.79115e-15, -2.18557e-07, -4.33751e-08, 2.45027, 0.496154, 2.1421e-07, 0.496154, -2.45027, -1.66465, 0.360494, -12.0712)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor181" parent="." index="341" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, 1.86163, 2.02317, 21.81)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor182" parent="." index="342" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 0, -2.18557e-07, 0, 2.5, 0, 2.18557e-07, 0, -2.5, 5.24239, 2.02317, 21.81)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor183" parent="." index="343" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, 8.54789, 2.02317, 21.81)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor184" parent="." index="344" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 0, -2.18557e-07, 0, 2.5, 0, 2.18557e-07, 0, -2.5, 11.839, 2.02317, 21.8147)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor185" parent="." index="345" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 0, -1.42109e-14, 0, 2.5, 0, 1.42109e-14, 0, 2.5, 15.1345, 2.02317, 21.81)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor186" parent="." index="346" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 0, -2.18557e-07, 0, 2.5, 0, 2.18557e-07, 0, -2.5, 18.5044, 1.9653, 21.81)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor187" parent="." index="347" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.27835e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, 3.27835e-07, 18.515, 2.02317, 25.0085)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor188" parent="." index="348" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 0, 4.37114e-07, 0, 2.5, 0, -4.37114e-07, 0, 2.5, 15.1342, 2.02317, 25.0085)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor189" parent="." index="349" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.27835e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, 3.27835e-07, 11.8287, 2.02317, 25.0085)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor190" parent="." index="350" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 0, 4.37114e-07, 0, 2.5, 0, -4.37114e-07, 0, 2.5, 8.53763, 2.02317, 25.0085)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor191" parent="." index="351" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 0, -2.18557e-07, 0, 2.5, 0, 2.18557e-07, 0, -2.5, 5.24209, 2.02317, 25.0085)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor192" parent="." index="352" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 0, 4.37114e-07, 0, 2.5, 0, -4.37114e-07, 0, 2.5, 1.87218, 1.9653, 25.0085)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor193" parent="." index="353" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, 1.86163, 2.02317, 28.1741)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor194" parent="." index="354" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 0, -2.18557e-07, 0, 2.5, 0, 2.18557e-07, 0, -2.5, 5.24239, 2.02317, 28.1741)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor195" parent="." index="355" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, 8.54789, 2.02317, 28.1741)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor196" parent="." index="356" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 0, -2.18557e-07, 0, 2.5, 0, 2.18557e-07, 0, -2.5, 11.839, 2.02317, 28.1741)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor197" parent="." index="357" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 0, -1.42109e-14, 0, 2.5, 0, 1.42109e-14, 0, 2.5, 15.1345, 2.02317, 28.1741)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor198" parent="." index="358" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 0, -2.18557e-07, 0, 2.5, 0, 2.18557e-07, 0, -2.5, 18.5044, 1.9653, 28.1741)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor199" parent="." index="359" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, -18.3074, 2.02317, 21.81)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor200" parent="." index="360" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 0, -2.18557e-07, 0, 2.5, 0, 2.18557e-07, 0, -2.5, -14.9267, 2.02317, 21.81)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor201" parent="." index="361" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, -11.6212, 2.02317, 21.81)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor202" parent="." index="362" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 0, -2.18557e-07, 0, 2.5, 0, 2.18557e-07, 0, -2.5, -8.33011, 2.02317, 21.81)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor203" parent="." index="363" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 0, -1.42109e-14, 0, 2.5, 0, 1.42109e-14, 0, 2.5, -5.03457, 2.02317, 21.81)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor204" parent="." index="364" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 0, -2.18557e-07, 0, 2.5, 0, 2.18557e-07, 0, -2.5, -1.66465, 1.9653, 21.81)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor205" parent="." index="365" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.27835e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, 3.27835e-07, -1.6541, 2.02317, 25.0085)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor206" parent="." index="366" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 0, 4.37114e-07, 0, 2.5, 0, -4.37114e-07, 0, 2.5, -5.03486, 2.02317, 25.0085)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor207" parent="." index="367" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.27835e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, 3.27835e-07, -8.34037, 2.02317, 25.0085)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor208" parent="." index="368" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 0, 4.37114e-07, 0, 2.5, 0, -4.37114e-07, 0, 2.5, -11.6314, 2.02317, 25.0085)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor209" parent="." index="369" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 0, -2.18557e-07, 0, 2.5, 0, 2.18557e-07, 0, -2.5, -14.927, 2.02317, 25.0085)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor210" parent="." index="370" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 0, 4.37114e-07, 0, 2.5, 0, -4.37114e-07, 0, 2.5, -18.2969, 1.9653, 25.0085)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor211" parent="." index="371" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, -18.3074, 2.02317, 28.1741)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor212" parent="." index="372" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 0, -2.18557e-07, 0, 2.5, 0, 2.18557e-07, 0, -2.5, -14.9267, 2.02317, 28.1741)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor213" parent="." index="373" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, -11.6212, 2.02317, 28.1741)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor214" parent="." index="374" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 0, -2.18557e-07, 0, 2.5, 0, 2.18557e-07, 0, -2.5, -8.33011, 2.02317, 28.1741)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor215" parent="." index="375" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.5, 0, -1.42109e-14, 0, 2.5, 0, 1.42109e-14, 0, 2.5, -5.03457, 2.02317, 28.1741)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor216" parent="." index="376" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.5, 0, -2.18557e-07, 0, 2.5, 0, 2.18557e-07, 0, -2.5, -1.66465, 1.9653, 28.1741)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor289" parent="." index="377" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.34545e-07, -6.63206e-08, -2.60081, 0.505746, 2.55117, -4.61997e-15, 2.55117, -0.505746, 3.41055e-07, 8.88435, 1.69827, 18.2958)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor290" parent="." index="378" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.60081, -6.63206e-08, -6.756e-07, 6.63206e-08, 2.55117, -0.505746, 6.756e-07, -0.505746, -2.55117, 8.87338, 0.992152, 15.0434)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor291" parent="." index="379" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.34545e-07, -6.63206e-08, -2.60081, 0.505746, 2.55117, -4.61997e-15, 2.55117, -0.505746, 3.41055e-07, 8.88435, 0.410822, 11.8014)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor292" parent="." index="380" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.60081, -6.63206e-08, 4.4823e-07, -2.21069e-08, 2.55117, 0.505746, -4.5257e-07, -0.505746, 2.55117, 19.3112, 1.70665, 18.338)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor293" parent="." index="381" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.60081, -6.63206e-08, -2.2086e-07, -2.21069e-08, 2.55117, -0.505746, 2.2954e-07, -0.505746, -2.55117, 15.8828, 1.70665, 18.338)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor294" parent="." index="382" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.60081, -6.63206e-08, 4.4823e-07, -2.21069e-08, 2.55117, 0.505746, -4.5257e-07, -0.505746, 2.55117, 12.3769, 1.64759, 18.3497)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor295" parent="." index="383" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-5.61915e-07, -6.63206e-08, 2.60081, -0.505746, 2.55117, -4.42137e-08, -2.55117, -0.505746, -5.64085e-07, 12.366, 1.05958, 15.074)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor296" parent="." index="384" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.60081, -6.63206e-08, -6.756e-07, 6.63206e-08, 2.55117, -0.505746, 6.756e-07, -0.505746, -2.55117, 15.8831, 1.05958, 15.074)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor297" parent="." index="385" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-5.61915e-07, -6.63206e-08, 2.60081, -0.505746, 2.55117, -4.42137e-08, -2.55117, -0.505746, -5.64085e-07, 19.3219, 1.05958, 15.074)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor298" parent="." index="386" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.60081, -6.63206e-08, 4.4823e-07, -2.21069e-08, 2.55117, 0.505746, -4.5257e-07, -0.505746, 2.55117, 19.3112, 0.419197, 11.8436)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor299" parent="." index="387" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.60081, -6.63206e-08, -2.2086e-07, -2.21069e-08, 2.55117, -0.505746, 2.2954e-07, -0.505746, -2.55117, 15.8828, 0.419197, 11.8436)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor300" parent="." index="388" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.60081, -6.63206e-08, 4.4823e-07, -2.21069e-08, 2.55117, 0.505746, -4.5257e-07, -0.505746, 2.55117, 12.3769, 0.36014, 11.8553)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor301" parent="." index="389" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.34545e-07, -6.63206e-08, -2.60081, 0.505746, 2.55117, -4.61997e-15, 2.55117, -0.505746, 3.41055e-07, -4.94811, 1.69827, 18.2958)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor302" parent="." index="390" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.60081, -6.63206e-08, -6.756e-07, 6.63206e-08, 2.55117, -0.505746, 6.756e-07, -0.505746, -2.55117, -4.95909, 0.992152, 15.0434)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor303" parent="." index="391" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.34545e-07, -6.63206e-08, -2.60081, 0.505746, 2.55117, -4.61997e-15, 2.55117, -0.505746, 3.41055e-07, -4.94811, 0.410822, 11.8014)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor304" parent="." index="392" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.60081, -6.63206e-08, 4.4823e-07, -2.21069e-08, 2.55117, 0.505746, -4.5257e-07, -0.505746, 2.55117, 5.47872, 1.70665, 18.338)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor305" parent="." index="393" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.60081, -6.63206e-08, -2.2086e-07, -2.21069e-08, 2.55117, -0.505746, 2.2954e-07, -0.505746, -2.55117, 2.05029, 1.70665, 18.338)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor306" parent="." index="394" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.60081, -6.63206e-08, 4.4823e-07, -2.21069e-08, 2.55117, 0.505746, -4.5257e-07, -0.505746, 2.55117, -1.45552, 1.64759, 18.3497)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor307" parent="." index="395" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-5.61915e-07, -6.63206e-08, 2.60081, -0.505746, 2.55117, -4.42137e-08, -2.55117, -0.505746, -5.64085e-07, -1.4665, 1.05958, 15.074)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor308" parent="." index="396" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.60081, -6.63206e-08, -6.756e-07, 6.63206e-08, 2.55117, -0.505746, 6.756e-07, -0.505746, -2.55117, 2.05059, 1.05958, 15.074)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor309" parent="." index="397" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-5.61915e-07, -6.63206e-08, 2.60081, -0.505746, 2.55117, -4.42137e-08, -2.55117, -0.505746, -5.64085e-07, 5.48939, 1.05958, 15.074)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor310" parent="." index="398" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.60081, -6.63206e-08, 4.4823e-07, -2.21069e-08, 2.55117, 0.505746, -4.5257e-07, -0.505746, 2.55117, 5.47872, 0.419197, 11.8436)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor311" parent="." index="399" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.60081, -6.63206e-08, -2.2086e-07, -2.21069e-08, 2.55117, -0.505746, 2.2954e-07, -0.505746, -2.55117, 2.05029, 0.419197, 11.8436)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor312" parent="." index="400" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.60081, -6.63206e-08, 4.4823e-07, -2.21069e-08, 2.55117, 0.505746, -4.5257e-07, -0.505746, 2.55117, -1.45552, 0.36014, 11.8553)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor313" parent="." index="401" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.34545e-07, -6.63206e-08, -2.60081, 0.505746, 2.55117, -4.61997e-15, 2.55117, -0.505746, 3.41055e-07, -18.9002, 1.69827, 18.2958)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor314" parent="." index="402" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.60081, -6.63206e-08, -6.756e-07, 6.63206e-08, 2.55117, -0.505746, 6.756e-07, -0.505746, -2.55117, -18.9112, 0.992152, 15.0434)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor315" parent="." index="403" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(3.34545e-07, -6.63206e-08, -2.60081, 0.505746, 2.55117, -4.61997e-15, 2.55117, -0.505746, 3.41055e-07, -18.9002, 0.410822, 11.8014)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor316" parent="." index="404" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.60081, -6.63206e-08, 4.4823e-07, -2.21069e-08, 2.55117, 0.505746, -4.5257e-07, -0.505746, 2.55117, -8.47337, 1.70665, 18.338)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor317" parent="." index="405" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.60081, -6.63206e-08, -2.2086e-07, -2.21069e-08, 2.55117, -0.505746, 2.2954e-07, -0.505746, -2.55117, -11.9018, 1.70665, 18.338)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor318" parent="." index="406" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.60081, -6.63206e-08, 4.4823e-07, -2.21069e-08, 2.55117, 0.505746, -4.5257e-07, -0.505746, 2.55117, -15.4076, 1.64759, 18.3497)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor319" parent="." index="407" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-5.61915e-07, -6.63206e-08, 2.60081, -0.505746, 2.55117, -4.42137e-08, -2.55117, -0.505746, -5.64085e-07, -15.4186, 1.05958, 15.074)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor320" parent="." index="408" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.60081, -6.63206e-08, -6.756e-07, 6.63206e-08, 2.55117, -0.505746, 6.756e-07, -0.505746, -2.55117, -11.9015, 1.05958, 15.074)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor321" parent="." index="409" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-5.61915e-07, -6.63206e-08, 2.60081, -0.505746, 2.55117, -4.42137e-08, -2.55117, -0.505746, -5.64085e-07, -8.4627, 1.05958, 15.074)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor322" parent="." index="410" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.60081, -6.63206e-08, 4.4823e-07, -2.21069e-08, 2.55117, 0.505746, -4.5257e-07, -0.505746, 2.55117, -8.47337, 0.419197, 11.8436)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor323" parent="." index="411" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(-2.60081, -6.63206e-08, -2.2086e-07, -2.21069e-08, 2.55117, -0.505746, 2.2954e-07, -0.505746, -2.55117, -11.9018, 0.419197, 11.8436)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor324" parent="." index="412" instance=ExtResource("6_wd3qv")]
+transform = Transform3D(2.60081, -6.63206e-08, 4.4823e-07, -2.21069e-08, 2.55117, 0.505746, -4.5257e-07, -0.505746, 2.55117, -15.4076, 0.36014, 11.8553)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor(1)" parent="." index="413" instance=ExtResource("7_wiju6")]
+transform = Transform3D(-1.12695e-07, 0, 2.57815, 0, 2.57815, 0, -2.57815, 0, -1.12695e-07, 1.72189, 0.0384271, 4.88686)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor(1)2" parent="." index="414" instance=ExtResource("7_wiju6")]
+transform = Transform3D(2.57815, 0, 0, 0, 2.57815, 0, 0, 0, 2.57815, 4.90741, 0.0384271, -1.81451)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor(1)3" parent="." index="415" instance=ExtResource("7_wiju6")]
+transform = Transform3D(-1.12695e-07, 0, -2.57815, 0, 2.57815, 0, 2.57815, 0, -1.12695e-07, -1.56254, 0.0384271, -5.09568)
+
+[node name="sympatric fractal mosaic as a high-resolution marble floor(1)4" parent="." index="416" instance=ExtResource("7_wiju6")]
+transform = Transform3D(2.57815, 0, 0, 0, 2.57815, 0, 0, 0, 2.57815, -4.81841, 0.0384271, 1.61097)
