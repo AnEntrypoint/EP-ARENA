@@ -8,6 +8,12 @@ signal health_changed(health_value)
 @onready var raycast = $Camera3D/RayCast3D
 
 var health = 3
+var is_air_dashing = false
+var air_dash_timer = 0.0
+var air_dash_duration = 0.2  # The duration of the dash
+var air_dash_speed = 150.0  # The speed of the dash
+var air_dash_cooldown = 0.5  # Cooldown time between dashes
+var last_air_dash_time = -1.0  # When the last dash was performed
 
 const SPEED = 10.0
 const JUMP_VELOCITY = 10.0
@@ -42,6 +48,21 @@ func _unhandled_input(event):
 func _physics_process(delta):
 	if not is_multiplayer_authority(): return
 	
+	# Handle Air Dash
+	if Input.is_action_just_pressed("air_dash") and not is_air_dashing and Time.get_ticks_msec() > last_air_dash_time + air_dash_cooldown * 1000:
+		is_air_dashing = true
+		air_dash_timer = air_dash_duration
+		last_air_dash_time = Time.get_ticks_msec()
+		# Set the dash direction based on the camera's orientation
+		var camera_direction = camera.global_transform.basis.z.normalized()
+		velocity = -camera_direction * air_dash_speed
+
+	# Update air dash logic
+	if is_air_dashing:
+		air_dash_timer -= delta
+		if air_dash_timer <= 0:
+			is_air_dashing = false
+
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y -= gravity * delta
